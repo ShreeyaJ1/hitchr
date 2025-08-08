@@ -1,0 +1,163 @@
+{
+  "name": "User",
+  "type": "object",
+  "extends": "BaseUser",
+  "properties": {
+    "display_name": {
+      "type": "string",
+      "description": "User's display name"
+    },
+    "current_role": {
+      "type": "string",
+      "enum": ["rider", "pilot"],
+      "default": "rider",
+      "description": "Current active role"
+    },
+    "tokens": {
+      "type": "number",
+      "default": 0,
+      "description": "Total tokens earned"
+    },
+    "token_breakdown": {
+      "type": "object",
+      "properties": {
+        "travel_tokens": {
+          "type": "number",
+          "default": 0
+        },
+        "eco_tokens": {
+          "type": "number",
+          "default": 0
+        },
+        "social_tokens": {
+          "type": "number",
+          "default": 0
+        },
+        "quest_tokens": {
+          "type": "number",
+          "default": 0
+        }
+      },
+      "description": "Breakdown of tokens by category"
+    },
+    "total_rides": {
+      "type": "number",
+      "default": 0,
+      "description": "Total number of rides completed"
+    },
+    "current_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Current consecutive days with rides"
+    },
+    "longest_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Longest streak achieved"
+    },
+    "trust_score": {
+      "type": "number",
+      "default": 5.0,
+      "minimum": 1.0,
+      "maximum": 5.0,
+      "description": "User trust rating"
+    },
+    "distance_traveled": {
+      "type": "number",
+      "default": 0,
+      "description": "Total distance traveled in km"
+    },
+    "co2_saved": {
+      "type": "number",
+      "default": 0,
+      "description": "CO2 saved in kg through carpooling"
+    },
+    "rto_collection": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of collected RTO plate codes"
+    },
+    "completed_trails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of completed trail IDs"
+    },
+    "active_quests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of active quest IDs"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of earned badge IDs"
+    },
+    "redeemed_rewards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "reward_id": {
+            "type": "string"
+          },
+          "reward_name": {
+            "type": "string"
+          },
+          "tokens_spent": {
+            "type": "number"
+          },
+          "redeemed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "description": "Array of redeemed rewards"
+    },
+    "referral_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of successful referrals"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "description": "User's current location"
+    },
+    "bio": {
+      "type": "string",
+      "description": "User's bio/description"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "User's profile picture URL"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["unverified", "pending", "verified"],
+      "default": "unverified",
+      "description": "User verification status"
+    }
+  }
+}

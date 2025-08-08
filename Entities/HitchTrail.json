@@ -1,0 +1,93 @@
+{
+  "name": "HitchTrail",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Trail name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Trail description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "scenic",
+        "heritage",
+        "adventure",
+        "cultural",
+        "nature"
+      ],
+      "description": "Trail category"
+    },
+    "route_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Array of route waypoints"
+    },
+    "distance_km": {
+      "type": "number",
+      "description": "Total trail distance in kilometers"
+    },
+    "estimated_duration": {
+      "type": "number",
+      "description": "Estimated duration in hours"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "moderate",
+        "challenging"
+      ],
+      "default": "easy",
+      "description": "Trail difficulty level"
+    },
+    "token_reward": {
+      "type": "number",
+      "default": 50,
+      "description": "Tokens awarded for completing trail"
+    },
+    "special_badge": {
+      "type": "string",
+      "description": "Special badge unlocked by completing this trail"
+    },
+    "completed_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs who have completed this trail"
+    },
+    "featured_image": {
+      "type": "string",
+      "description": "Trail featured image URL"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether trail is active"
+    }
+  },
+  "required": [
+    "name",
+    "description",
+    "category",
+    "distance_km",
+    "estimated_duration"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "name": "Badge",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Badge name"
+    },
+    "title": {
+      "type": "string",
+      "description": "Badge title/subtitle"
+    },
+    "description": {
+      "type": "string",
+      "description": "Badge description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "rides",
+        "distance",
+        "streak",
+        "eco",
+        "rto",
+        "social",
+        "special"
+      ],
+      "description": "Badge category"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Badge icon (emoji or icon name)"
+    },
+    "rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "uncommon",
+        "rare",
+        "epic",
+        "legendary"
+      ],
+      "default": "common",
+      "description": "Badge rarity level"
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "total_rides": {
+          "type": "number",
+          "description": "Required number of total rides"
+        },
+        "distance_km": {
+          "type": "number",
+          "description": "Required distance traveled in km"
+        },
+        "current_streak": {
+          "type": "number",
+          "description": "Required current streak in days"
+        },
+        "tokens": {
+          "type": "number",
+          "description": "Required number of tokens"
+        },
+        "trust_score": {
+          "type": "number",
+          "description": "Required trust score"
+        },
+        "rto_plates": {
+          "type": "number",
+          "description": "Required number of RTO plates collected"
+        },
+        "co2_saved": {
+          "type": "number",
+          "description": "Required CO2 saved in kg"
+        },
+        "referrals": {
+          "type": "number",
+          "description": "Required number of referrals"
+        }
+      },
+      "description": "Requirements to unlock this badge"
+    },
+    "reward_tokens": {
+      "type": "number",
+      "default": 0,
+      "description": "Tokens awarded when badge is earned"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether badge is active"
+    }
+  },
+  "required": [
+    "name",
+    "title",
+    "description",
+    "category",
+    "icon",
+    "rarity"
+  ]
+}

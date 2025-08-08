@@ -1,0 +1,102 @@
+{
+  "name": "Quest",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Quest title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Quest description"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "individual",
+        "community",
+        "trail",
+        "event"
+      ],
+      "description": "Quest type"
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "rides_count": {
+          "type": "number",
+          "description": "Required number of rides"
+        },
+        "distance_km": {
+          "type": "number",
+          "description": "Required distance in km"
+        },
+        "streak_days": {
+          "type": "number",
+          "description": "Required streak in days"
+        },
+        "rto_plates": {
+          "type": "number",
+          "description": "Required RTO plates to collect"
+        },
+        "social_shares": {
+          "type": "number",
+          "description": "Required social shares"
+        }
+      },
+      "description": "Quest requirements"
+    },
+    "rewards": {
+      "type": "object",
+      "properties": {
+        "tokens": {
+          "type": "number",
+          "description": "Token reward"
+        },
+        "badge": {
+          "type": "string",
+          "description": "Badge reward"
+        },
+        "special_item": {
+          "type": "string",
+          "description": "Special item reward"
+        }
+      },
+      "description": "Quest rewards"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Quest start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Quest end date"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs of participants"
+    },
+    "completion_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of users who completed this quest"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether quest is active"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "type",
+    "start_date",
+    "end_date"
+  ]
+}
