@@ -18,11 +18,11 @@ import {
   Leaf
 } from "lucide-react";
 
-import StatsGrid from "../components/dashboard/StatsGrid";
-import RoleToggle from "../components/dashboard/RoleToggle";
-import RecentActivity from "../components/dashboard/RecentActivity";
-import QuickActions from "../components/dashboard/QuickActions";
-import TokenEarner from "../components/dashboard/TokenEarner";
+import StatsGrid from "../Components/dashboard/StatsGrid";
+import RoleToggle from "../Components/dashboard/RoleToggle";
+import RecentActivity from "../Components/dashboard/RecentActivity";
+import QuickActions from "../Components/dashboard/QuickActions";
+import TokenEarner from "../Components/dashboard/TokenEarner";
 
 export default function Dashboard() {
   const [currentUser, setCurrentUser] = useState(null);
