@@ -1,6 +1,6 @@
 import React from "react";
 import { User } from "@/entities/all";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { Zap, Plus } from "lucide-react";
 
 export default function TokenEarner() {

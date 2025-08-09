@@ -11,8 +11,8 @@ import {
   Calendar,
   MapPin
 } from "lucide-react";
-import BadgeGrid from "../components/badges/BadgeGrid";
-import AvatarUpload from "../components/profile/AvatarUpload";
+import BadgeGrid from "../Components/badges/BadgeGrid";
+import AvatarUpload from "../Components/profile/AvatarUpload";
 
 export default function Profile() {
   const [currentUser, setCurrentUser] = useState(null);

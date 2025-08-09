@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import Layout from '../Layout.js'
+import Layout from '../Layout.jsx'
 import Dashboard from '../Pages/Dashboard.jsx'
 import Map from '../Pages/Maps.jsx'
 import Trails from '../Pages/Trails.jsx'
