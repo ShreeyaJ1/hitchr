@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { User, Story } from "@/entities/all";
 import { BookOpen, Heart, MessageCircle, Plus, Image } from "lucide-react";
 import { format } from "date-fns";
-import StoryForm from "../components/stories/StoryForm";
+import StoryForm from "../Components/stories/StoryForum";
 
 export default function Stories() {
   const [stories, setStories] = useState([]);
